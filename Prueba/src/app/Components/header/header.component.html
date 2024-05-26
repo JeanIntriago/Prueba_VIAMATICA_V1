@@ -1,0 +1,17 @@
+<mat-toolbar style="display: flex; justify-content: space-around; position: relative; height: 15vh;">
+  <div class="logo_content" style="display: flex; align-items: center;">
+    <img src="../../../assets/img/Ventas-App-Logo-white-png.png.webp" alt="Logo" style="position: relative; height: 7vh; width: auto; top: 0; left: 0;">
+  </div>
+  <span class="example-spacer"></span>
+
+  <button mat-button class="example-icon" style="border: 0;">
+    <button mat-button (click)="verCarrito()" style="background-color: none; border: 0;">
+      <mat-icon style="background-color: none;">shopping_cart</mat-icon>
+    </button>
+  </button>
+
+  <button mat-button (click)="cerrarSesion()" style="background-color: red; border: 0;">
+    <i class="bi bi-box-arrow-left" style="padding: 25px 20px; color: #ffffff;"></i>
+  </button>
+
+</mat-toolbar>

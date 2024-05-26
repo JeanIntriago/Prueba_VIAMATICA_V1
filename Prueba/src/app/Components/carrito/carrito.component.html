@@ -1,0 +1,32 @@
+
+<div class="container_carrito" style="width: 60vw; height: 50vh;">
+  <h1 mat-dialog-title style="text-align: center;">Tus Pedidos</h1>
+  <div mat-dialog-content *ngFor="let item of data">
+    <div class="container_item_carrito" style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; height: 30px;">
+      <p style="line-height: 30px;"><strong>Cod:</strong> {{ item.idProducto}}</p>
+      <p><strong>Nombre:</strong> {{ item.nombreProducto}}</p>
+      <p><strong>Precio:</strong> {{ item.precio}}</p>
+    </div>
+  </div>
+  
+  <div class="total" style="width: 80%; margin: 0 auto;">
+    <p style="color: red; font-size: 1.5rem; text-align: end; font-weight: bolder;">Total: <span>{{total}}</span></p>
+  </div> 
+
+  <div mat-dialog-actions style="display: flex; justify-content: space-between;">
+    <button mat-button mat-dialog-close style="
+    width:25%;
+    height:40px;
+    border: 0;">Seguir comprando</button>
+
+    <button mat-button style="background-color: rgb(17, 216, 83);
+    width:40%;
+    height:40px;
+    border: 0;"
+    (click)="registrarCompra()">Comprar</button>
+  </div>
+</div>
+
+<div *ngIf="loading" class="spinner-overlay">
+  <mat-spinner diameter="50"></mat-spinner>
+</div>

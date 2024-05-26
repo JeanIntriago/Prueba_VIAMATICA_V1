@@ -1,0 +1,47 @@
+
+<div class="container main_container w-100 h-100 d-flex justify-content-center align-items-center" >
+  <div class="container_form" style="width: auto;height: 70vh; margin: 0 auto;">
+      <form [formGroup]="form" (ngSubmit)="registrar()" class="w-100 h-100">
+          <div class="container row d-flex justify-content-center align-items-center flex-column" style="border: 1px solid black; width: 100%; height: 100%;">
+              
+            <div class="col-12">
+              <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-6">
+                  <mat-form-field appearance="fill">
+                      <label for="nombre" class="form-label">Nombres:</label>
+                      <input matInput formControlName="nombre">
+                  </mat-form-field>
+                </div>
+                <div class="col-6">
+                  <mat-form-field appearance="fill">
+                    <label for="apellido" class="form-label">Apellidos:</label>
+                    <input matInput formControlName="apellido">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <mat-form-field style="width: 100%;" class="d-flex flex-column">
+                  <label for="correo" class="form-label">Correo electronico:</label>
+                  <input matInput formControlName="correo" style="width:100%;">
+                </mat-form-field>
+              </div>
+
+              <mat-form-field appearance="fill">
+                <label for="clave" class="form-label">Clave:</label>
+                <input matInput formControlName="clave">
+              </mat-form-field>
+              
+              <div class="d-flex justify-content-center flex-column">
+                  <button class="btn btn-primary">
+                      Registrar Cuenta
+                  </button>
+                  <button mat-button style="background-color: transparent;border: 0; padding: 15px 0;" (click)="iniciarSesion()">
+                    Inicia Sesion
+                </button>
+              </div>
+            </div>
+          </div>
+      </form>
+  </div>
+</div>
