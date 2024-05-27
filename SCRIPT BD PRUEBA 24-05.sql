@@ -6,12 +6,12 @@ create table Usuario(
 	apellido varchar(60) not null,
 	correo varchar(150) not null,
 	clave varchar(30) not null
-)
+);
 
 create table Categoria(
 	idCategoria int identity(1,1) primary key,
 	nombreCategoria varchar(50) not null
-)
+);
 
 create table Producto(
 	idProducto int identity(1,1) primary key,
@@ -19,7 +19,7 @@ create table Producto(
 	precio float,
 	cantidad int,
 	idCategoria int references Categoria(idCategoria)
-)
+);
 
 
 CREATE TABLE OrdenCompra (
@@ -39,7 +39,10 @@ CREATE TABLE OrdenCompraDetalle (
         REFERENCES Producto(idProducto)
 );
 
+/*CREACION DE USUARIO*/
+INSERT INTO Usuario ( nombre, apellido, correo, clave) VALUES ('Admin','Admin','admin@gmail.com','12345');
 
+/*CREACION DE CATEGORIAS*/
 INSERT INTO Categoria ( nombreCategoria) VALUES ('Electr�nica');
 INSERT INTO Categoria ( nombreCategoria) VALUES ('Ropa');
 INSERT INTO Categoria ( nombreCategoria) VALUES ('Hogar');
